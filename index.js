@@ -2,17 +2,44 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const { generateCircle, generateTriangle, generateSquare } = require('./lib/shapes');
 
+function validateColor(input) {
+    // Regular expression to validate hexadecimal color code
+    const hexColorRegex = /^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/;
+    if (!input) {
+        return 'Please provide a color value.';
+      }
+    if (
+      input === '' ||
+      /^#[0-9A-Fa-f]{3}$/.test(input) ||
+      /^#[0-9A-Fa-f]{6}$/.test(input) ||
+      /^(black|green|silver|gray|grey|olive|white|yellow|maroon|navy|red|blue|purple|teal|fuchsia|aqua)$/.test(input)
+    ) {
+      return true;
+    }
+  
+    return 'Please enter a valid color name or hexadecimal code (e.g., "#FF0000" or "red").';
+  }
+
+
 inquirer
   .prompt([
     {
       type: 'input',
       name: 'text',
       message: 'Enter three characters of text:',
+      validate: (input) => {
+        if (input.length !== 3) {
+          return 'Please enter exactly three characters.';
+        }
+        return true;
+      },
     },
     {
       type: 'input',
       name: 'textColor',
       message: 'Enter the text color (name or hexadecimal):',
+      validate: validateColor,
+      
     },
     {
       type: 'list',
@@ -24,6 +51,7 @@ inquirer
       type: 'input',
       name: 'shapeColor',
       message: 'Enter the shape color (name or hexadecimal):',
+      validate: validateColor,
     },
   ])
   .then((answers) => {
@@ -46,12 +74,15 @@ inquirer
     }
 
     const svgContent = `<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200">
-      ${shapeContent}
-      <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="40" fill="${textColor}">${text}</text>
-    </svg>`;
+    ${shapeContent}
+    <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="40" fill="${textColor}">${text}</text>
+  </svg>`;
 
     fs.writeFile('logo.svg', svgContent, (err) => {
       if (err) throw err;
       console.log('Generated logo.svg');
     });
   });
+
+  
+
