@@ -1,4 +1,4 @@
-const { generateCircle, generateTriangle, generateSquare } = require('./shapes');
+const { generateCircle, generateTriangle, generateSquare } = require('../lib/shapes');
 
 describe('Shape Generation', () => {
     
