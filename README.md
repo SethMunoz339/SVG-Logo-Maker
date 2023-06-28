@@ -31,7 +31,7 @@ To use this application, the user types 'node index.js into the terminal. They a
 
 ## Contributing
 
-Seth Munoz creaed this application, no contributions are neccesary.
+Seth Munoz created this application, no contributions are neccesary.
 
 ## License
 
