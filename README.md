@@ -40,9 +40,13 @@ This project is licensed under the [MIT](https://opensource.org/licenses/MIT) li
 ## Credits
 
 The following websites were referenced during the creattion of this application: 
+
 https://developer.mozilla.org/en-US/docs/Web/SVG
+
 https://stackoverflow.com/questions/8027423/how-to-check-if-a-string-is-a-valid-hex-color-representation
+
 https://stackoverflow.com/questions/5563763/what-is-you-favourite-approach-to-check-if-a-html-color-is-valid
+
 https://jestjs.io/docs/mock-functions
 
 For any questions, you can reach me at [drteeth339@gmail.com](mailto:drteeth339@gmail.com)
