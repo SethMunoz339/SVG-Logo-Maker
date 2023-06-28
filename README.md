@@ -27,7 +27,7 @@ To use this application, the user types 'node index.js into the terminal. They a
 
 ## Video
 
-
+https://watch.screencastify.com/v/hIwoAp3srcYrz9PbZUrg
 
 ## Contributing
 
