@@ -41,16 +41,8 @@ This project is licensed under the [MIT](https://opensource.org/licenses/MIT) li
 
 The following websites were referenced during the creattion of this application: 
 https://developer.mozilla.org/en-US/docs/Web/SVG
-https://stackoverflow.com/questions/8027423/how-to-check-if-a-string-is-a-valid-hex-color-representation,
+https://stackoverflow.com/questions/8027423/how-to-check-if-a-string-is-a-valid-hex-color-representation
 https://stackoverflow.com/questions/5563763/what-is-you-favourite-approach-to-check-if-a-html-color-is-valid
-
-
-## Testing
-
- test the application run an npm test. The shapes.test.js file will run.
-
-## Questions
-
-Find me on GitHub: [https://github.com/SethMunoz339](https://github.com/https://github.com/SethMunoz339)
+https://jestjs.io/docs/mock-functions
 
 For any questions, you can reach me at [drteeth339@gmail.com](mailto:drteeth339@gmail.com)
